@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+.rock-btn {
+  max-width: 20%;
+}
+
+.paper-btn {
+  max-width: 23%;
+}
+
+.scissors-btn {
+  max-width: 25%;
+  transform: rotate(180deg);
+}

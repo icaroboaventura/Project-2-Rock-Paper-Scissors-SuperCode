@@ -7,9 +7,28 @@
     <title>Rock Paper Scissors</title>
   </head>
   <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <div class="wrapper">
+      <header>
+        <h1>Rock Paper Scissorss</h1>
+      </header>
+      <main>
+        <h2>Choose Your Weapon</h2>
+        <section class="game-infos">
+          <p class="you"></p>
+          <p class="cpu"></p>
+          <p class="result"></p>
+        </section>
+        <form onsubmit="return false">
+          <div class="game-buttons">
+            <input type="image" src="./assets/img/rock.png" class="rock-btn" value="rock" onclick="startGame(this.value)" />
+            <input type="image" src="./assets/img/paper.png" class="paper-btn" value="paper" onclick="startGame(this.value)" />
+            <input type="image" src="./assets/img/scissors.png" class="scissors-btn" value="scissors" onclick="startGame(this.value)" />
+          </div>
+          <button>Restart Game</button>
+        </form>
+      </main>
+      <footer></footer>
+    </div>|
     <script src="./assets/js/main.js"></script>
   </body>
 </html>
