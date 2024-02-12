@@ -9,7 +9,7 @@ const outputRounds = document.querySelector(".rounds");
 const outputScore = document.querySelector(".score");
 
 let round = 0;
-let maxRound = 3;
+// let maxRound = 3;
 let youScore = 0;
 let enemyScore = 0;
 
@@ -24,7 +24,7 @@ const startGame = (clickedValue) => {
   if (clickedValue === "rock") {
     switch (enemysMove) {
       case 0: // ----- rock
-        maxRound++;
+        // maxRound++;
         outputScore.innerHTML = youScore + " X " + enemyScore;
         outputResult.innerHTML = "Draw!";
         outputYou.innerHTML = "You Choose: <span>Rock</span>";
@@ -55,7 +55,7 @@ const startGame = (clickedValue) => {
         outputEnemy.innerHTML = "Enemy Choose: <span>Rock</span>";
         break;
       case 1: // ----- paper
-        maxRound++;
+        // maxRound++;
         outputScore.innerHTML = youScore + " X " + enemyScore;
         outputResult.innerHTML = "Draw!";
         outputYou.innerHTML = "You Choose:  <span>Paper</span>";
@@ -86,7 +86,7 @@ const startGame = (clickedValue) => {
         outputEnemy.innerHTML = "Enemy Choose:  <span>Paper</span>";
         break;
       default: // ---- scissors
-        maxRound++;
+        // maxRound++;
         outputScore.innerHTML = youScore + " X " + enemyScore;
         outputResult.innerHTML = "Draw!";
         outputYou.innerHTML = "You Choose: <span>Scissors</span>";
@@ -98,7 +98,7 @@ const startGame = (clickedValue) => {
   round++;
   outputRounds.innerHTML = "Rounds: " + round;
 
-  if (round == maxRound) {
+  if (round == 3) {
     round = 0;
     youScore = 0;
     enemyScore = 0;
