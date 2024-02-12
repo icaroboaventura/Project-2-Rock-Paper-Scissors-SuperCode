@@ -7,6 +7,7 @@ const outputEnemy = document.querySelector(".enemy");
 const outputResult = document.querySelector(".result");
 
 const startGame = (clickedValue) => {
+  console.log(clickedValue);
   // Get random number
   const enemysMove = Math.floor(Math.random() * 3);
 

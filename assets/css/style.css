@@ -1,7 +1,62 @@
+@font-face {
+  font-family: "Bangers";
+  src: url(../font/Bangers/Bangers-Regular.ttf);
+}
+@font-face {
+  font-family: "Comic Neue Bold";
+  src: url(../font/Comic_Neue/ComicNeue-Bold.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: 0;
+}
+
+.wrapper {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+}
+
+h1 {
+  font-family: "Bangers";
+}
+
+h2 {
+  font-family: "Comic Neue Bold";
+  margin-bottom: 50px;
+}
+
+h1,
+h2 {
+  font-family: "Bangers";
+  text-align: center;
+}
+
+.game-infos {
+  width: 200px;
+  margin-inline: auto;
+  height: 70px;
+  font-family: "Bangers";
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.game-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
 }
 
 .rock-btn {
@@ -15,4 +70,10 @@
 .scissors-btn {
   max-width: 25%;
   transform: rotate(180deg);
+}
+
+input[type="button"] {
+  font-family: "Bangers";
+  padding: 20px;
+  border-radius: 20px;
 }

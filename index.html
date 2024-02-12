@@ -20,11 +20,11 @@
         </section>
         <form onsubmit="return false">
           <div class="game-buttons">
-            <input type="image" src="./assets/img/rock.png" class="rock-btn" value="rock" onclick="startGame(this.value)" />
-            <input type="image" src="./assets/img/paper.png" class="paper-btn" value="paper" onclick="startGame(this.value)" />
-            <input type="image" src="./assets/img/scissors.png" class="scissors-btn" value="scissors" onclick="startGame(this.value)" />
+            <input type="image" src="./assets/img/rock.png" class="rock-btn" onclick="startGame('rock')" />
+            <input type="image" src="./assets/img/paper.png" class="paper-btn" value="paper" onclick="startGame('paper')" />
+            <input type="image" src="./assets/img/scissors.png" class="scissors-btn" onclick="startGame('scissors')" />
           </div>
-          <input type="button" value="Restart Game" />
+          <!-- <input type="button" value="Restart Game" /> -->
         </form>
       </main>
       <footer></footer>
