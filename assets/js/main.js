@@ -27,22 +27,22 @@ const startGame = (clickedValue) => {
         // maxRound++;
         outputScore.innerHTML = youScore + " X " + enemyScore;
         outputResult.innerHTML = "Draw!";
-        outputYou.innerHTML = "You Choose: <span>Rock</span>";
-        outputEnemy.innerHTML = "Enemy Choose: <span>Rock</span>";
+        outputYou.innerHTML = "You Choose: <span><img src='./assets/img/rock.png' alt='rock'></span>";
+        outputEnemy.innerHTML = "Enemy Choose: <span><img src='./assets/img/rock.png' alt='rock'></span>";
         break;
       case 1: // ----- paper
         enemyScore++;
         outputScore.innerHTML = youScore + " X " + enemyScore;
         outputResult.innerHTML = "You Lose!";
-        outputYou.innerHTML = "You Choose: <span>Rock</span>";
-        outputEnemy.innerHTML = "Enemy Choose: <span>Paper</span>";
+        outputYou.innerHTML = "You Choose: <span><img src='./assets/img/rock.png' alt='rock'></span>";
+        outputEnemy.innerHTML = "Enemy Choose: <span><img src='./assets/img/paper.png' alt='paper'></span>";
         break;
       default: // ---- scissors
         youScore++;
         outputScore.innerHTML = youScore + " X " + enemyScore;
         outputResult.innerHTML = "You Win!";
-        outputYou.innerHTML = "You Choose: <span>Rock</span>";
-        outputEnemy.innerHTML = "Enemy Choose:  <span>Scissors</span>";
+        outputYou.innerHTML = "You Choose: <span><img src='./assets/img/rock.png' alt='rock'></span>";
+        outputEnemy.innerHTML = "Enemy Choose:  <span><img src='./assets/img/scissors.png' alt='scissors'></span>";
         break;
     }
   } else if (clickedValue === "paper") {
@@ -51,22 +51,22 @@ const startGame = (clickedValue) => {
         youScore++;
         outputScore.innerHTML = youScore + " X " + enemyScore;
         outputResult.innerHTML = "You Win!";
-        outputYou.innerHTML = "You Choose:  <span>Paper</span>";
-        outputEnemy.innerHTML = "Enemy Choose: <span>Rock</span>";
+        outputYou.innerHTML = "You Choose:  <span><img src='./assets/img/paper.png' alt='paper'></span>";
+        outputEnemy.innerHTML = "Enemy Choose: <span><img src='./assets/img/rock.png' alt='rock'></span>";
         break;
       case 1: // ----- paper
         // maxRound++;
         outputScore.innerHTML = youScore + " X " + enemyScore;
         outputResult.innerHTML = "Draw!";
-        outputYou.innerHTML = "You Choose:  <span>Paper</span>";
-        outputEnemy.innerHTML = "Enemy Choose:  <span>Paper</span>";
+        outputYou.innerHTML = "You Choose:  <span><img src='./assets/img/paper.png' alt='paper'></span>";
+        outputEnemy.innerHTML = "Enemy Choose:  <span><img src='./assets/img/paper.png' alt='paper'></span>";
         break;
       default: // ---- scissors
         enemyScore++;
         outputScore.innerHTML = youScore + " X " + enemyScore;
         outputResult.innerHTML = "You Lose!";
-        outputYou.innerHTML = "You Choose:  <span>Paper</span>";
-        outputEnemy.innerHTML = "Enemy Choose: <span>Scissors</span>";
+        outputYou.innerHTML = "You Choose:  <span><img src='./assets/img/paper.png' alt='paper'></span>";
+        outputEnemy.innerHTML = "Enemy Choose: <span><img src='./assets/img/scissors.png' alt='scissors'></span>";
         break;
     }
   } else {
@@ -75,22 +75,22 @@ const startGame = (clickedValue) => {
         enemyScore++;
         outputScore.innerHTML = youScore + " X " + enemyScore;
         outputResult.innerHTML = "You Lose!";
-        outputYou.innerHTML = "You Choose: <span>Scissors</span>";
-        outputEnemy.innerHTML = "Enemy Choose: <span>Rock</span>";
+        outputYou.innerHTML = "You Choose: <span><img src='./assets/img/scissors.png' alt='scissors'></span>";
+        outputEnemy.innerHTML = "Enemy Choose: <span><img src='./assets/img/rock.png' alt='rock'></span>";
         break;
       case 1: // ----- paper
         youScore++;
         outputScore.innerHTML = youScore + " X " + enemyScore;
         outputResult.innerHTML = "You Win!";
-        outputYou.innerHTML = "You Choose: <span>Scissors</span>";
-        outputEnemy.innerHTML = "Enemy Choose:  <span>Paper</span>";
+        outputYou.innerHTML = "You Choose: <span><img src='./assets/img/scissors.png' alt='scissors'></span>";
+        outputEnemy.innerHTML = "Enemy Choose:  <span><img src='./assets/img/paper.png' alt='paper'></span>";
         break;
       default: // ---- scissors
         // maxRound++;
         outputScore.innerHTML = youScore + " X " + enemyScore;
         outputResult.innerHTML = "Draw!";
-        outputYou.innerHTML = "You Choose: <span>Scissors</span>";
-        outputEnemy.innerHTML = "Enemy Choose: <span>Scissors</span>";
+        outputYou.innerHTML = "You Choose: <span><img src='./assets/img/scissors.png' alt='scissors'></span>";
+        outputEnemy.innerHTML = "Enemy Choose: <span><img src='./assets/img/scissors.png' alt='scissors'></span>";
         break;
     }
   }
