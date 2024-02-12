@@ -15,7 +15,7 @@
         <h2>Choose Your Weapon</h2>
         <section class="game-infos">
           <p class="you"></p>
-          <p class="cpu"></p>
+          <p class="enemy"></p>
           <p class="result"></p>
         </section>
         <form onsubmit="return false">
@@ -24,11 +24,11 @@
             <input type="image" src="./assets/img/paper.png" class="paper-btn" value="paper" onclick="startGame(this.value)" />
             <input type="image" src="./assets/img/scissors.png" class="scissors-btn" value="scissors" onclick="startGame(this.value)" />
           </div>
-          <button>Restart Game</button>
+          <input type="button" value="Restart Game" />
         </form>
       </main>
       <footer></footer>
-    </div>|
+    </div>
     <script src="./assets/js/main.js"></script>
   </body>
 </html>
