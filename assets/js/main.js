@@ -9,6 +9,9 @@ const outputRounds = document.querySelector(".rounds");
 const outputScore = document.querySelector(".score");
 
 let round = 0;
+let maxRound = 3;
+let youScore = 0;
+let enemyScore = 0;
 
 const startGame = (clickedValue) => {
   // Get random number
@@ -21,16 +24,22 @@ const startGame = (clickedValue) => {
   if (clickedValue === "rock") {
     switch (enemysMove) {
       case 0: // ----- rock
+        maxRound++;
+        outputScore.innerHTML = youScore + " X " + enemyScore;
         outputResult.innerHTML = "Draw!";
         outputYou.innerHTML = "You Choose: <span>Rock</span>";
         outputEnemy.innerHTML = "Enemy Choose: <span>Rock</span>";
         break;
       case 1: // ----- paper
+        enemyScore++;
+        outputScore.innerHTML = youScore + " X " + enemyScore;
         outputResult.innerHTML = "You Lose!";
         outputYou.innerHTML = "You Choose: <span>Rock</span>";
         outputEnemy.innerHTML = "Enemy Choose: <span>Paper</span>";
         break;
       default: // ---- scissors
+        youScore++;
+        outputScore.innerHTML = youScore + " X " + enemyScore;
         outputResult.innerHTML = "You Win!";
         outputYou.innerHTML = "You Choose: <span>Rock</span>";
         outputEnemy.innerHTML = "Enemy Choose:  <span>Scissors</span>";
@@ -77,8 +86,20 @@ const startGame = (clickedValue) => {
   round++;
   outputRounds.innerHTML = "Rounds: " + round;
 
-  if (round == 3) {
+  if (round == maxRound) {
     round = 0;
-    outputRounds.innerHTML = "Rounds:";
+    youScore = 0;
+    enemyScore = 0;
   }
+};
+
+const restart = () => {
+  round = 0;
+  youScore = 0;
+  enemyScore = 0;
+  outputResult.innerHTML = "";
+  outputYou.innerHTML = "";
+  outputEnemy.innerHTML = "";
+  outputRounds.innerHTML = "Rounds: ";
+  outputScore.innerHTML = "0 X 0";
 };
