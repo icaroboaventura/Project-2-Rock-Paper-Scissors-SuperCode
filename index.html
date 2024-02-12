@@ -8,26 +8,25 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <h1>Rock Paper Scissorss</h1>
-      </header>
+      <h1>Rock Paper Scissorss</h1>
       <main>
-        <h2>Choose Your Weapon</h2>
+        <h2>Choose Your Weapon:</h2>
+        <div class="game-buttons">
+          <img type="image" src="./assets/img/rock.png" class="rock-btn" onclick="startGame('rock')" />
+          <img type="image" src="./assets/img/paper.png" class="paper-btn" value="paper" onclick="startGame('paper')" />
+          <img type="image" src="./assets/img/scissors.png" class="scissors-btn" onclick="startGame('scissors')" />
+        </div>
         <section class="game-infos">
           <p class="you"></p>
           <p class="enemy"></p>
           <p class="result"></p>
         </section>
-        <form onsubmit="return false">
-          <div class="game-buttons">
-            <input type="image" src="./assets/img/rock.png" class="rock-btn" onclick="startGame('rock')" />
-            <input type="image" src="./assets/img/paper.png" class="paper-btn" value="paper" onclick="startGame('paper')" />
-            <input type="image" src="./assets/img/scissors.png" class="scissors-btn" onclick="startGame('scissors')" />
-          </div>
-          <!-- <input type="button" value="Restart Game" /> -->
-        </form>
+        <section class="counter">
+          <h2 class="rounds">Rounds:</h2>
+          <h2 class="score">You: X Enemy:</h2>
+          <button class="restart-game" onclick="restart()">Restart Game</button>
+        </section>
       </main>
-      <footer></footer>
     </div>
     <script src="./assets/js/main.js"></script>
   </body>

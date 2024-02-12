@@ -20,36 +20,49 @@
   justify-content: center;
   flex-direction: column;
   gap: 50px;
+  background-image: linear-gradient(45deg, hsl(240deg 75% 70%) 0%, hsl(211deg 100% 58%) 21%, hsl(201deg 100% 50%) 30%, hsl(197deg 100% 50%) 39%, hsl(193deg 100% 50%) 46%, hsl(187deg 100% 47%) 54%, hsl(179deg 100% 44%) 61%, hsl(169deg 100% 46%) 69%, hsl(153deg 87% 62%) 79%, hsl(118deg 88% 77%) 100%);
 }
 
 h1 {
   font-family: "Bangers";
+  -webkit-text-stroke: 1px black;
+  color: white;
 }
 
 h2 {
   font-family: "Comic Neue Bold";
   margin-bottom: 50px;
+  -webkit-text-stroke: 0.3px white;
+  color: black;
+}
+
+p {
+  font-size: 18px;
 }
 
 h1,
-h2 {
+h2,
+p {
   font-family: "Bangers";
   text-align: center;
+}
+
+span {
+  -webkit-text-stroke: 1px black;
+  color: white;
+}
+
+.result {
+  font-size: 24px;
+  -webkit-text-stroke: 1px black;
+  color: white;
 }
 
 .game-infos {
   width: 200px;
   margin-inline: auto;
   height: 70px;
-  font-family: "Bangers";
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 50px;
+  margin-bottom: 50px;
 }
 
 .game-buttons {
@@ -57,6 +70,11 @@ form {
   align-items: center;
   justify-content: center;
   gap: 50px;
+  margin-bottom: 50px;
+}
+
+.scissors-btn {
+  max-width: 25%;
 }
 
 .rock-btn {
@@ -66,14 +84,38 @@ form {
 .paper-btn {
   max-width: 23%;
 }
-
-.scissors-btn {
-  max-width: 25%;
-  transform: rotate(180deg);
+.rock-btn:hover,
+.paper-btn:hover,
+.scissors-btn:hover {
+  transform: translateY(-3px);
+}
+.rock-btn:active,
+.paper-btn:active,
+.scissors-btn:active {
+  transform: translateY(-1px);
 }
 
-input[type="button"] {
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.restart-game {
+  background-color: white;
+  box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.251);
+  border: none;
+  font-size: 18px;
   font-family: "Bangers";
   padding: 20px;
   border-radius: 20px;
+}
+
+.restart-game:hover {
+  color: white;
+  background-color: black;
+}
+
+.restart-game:active {
+  transform: translateY(-1px);
 }
