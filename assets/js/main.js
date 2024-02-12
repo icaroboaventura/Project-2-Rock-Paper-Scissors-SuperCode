@@ -48,16 +48,22 @@ const startGame = (clickedValue) => {
   } else if (clickedValue === "paper") {
     switch (enemysMove) {
       case 0: // ----- rock
+        youScore++;
+        outputScore.innerHTML = youScore + " X " + enemyScore;
         outputResult.innerHTML = "You Win!";
         outputYou.innerHTML = "You Choose:  <span>Paper</span>";
         outputEnemy.innerHTML = "Enemy Choose: <span>Rock</span>";
         break;
       case 1: // ----- paper
+        maxRound++;
+        outputScore.innerHTML = youScore + " X " + enemyScore;
         outputResult.innerHTML = "Draw!";
         outputYou.innerHTML = "You Choose:  <span>Paper</span>";
         outputEnemy.innerHTML = "Enemy Choose:  <span>Paper</span>";
         break;
       default: // ---- scissors
+        enemyScore++;
+        outputScore.innerHTML = youScore + " X " + enemyScore;
         outputResult.innerHTML = "You Lose!";
         outputYou.innerHTML = "You Choose:  <span>Paper</span>";
         outputEnemy.innerHTML = "Enemy Choose: <span>Scissors</span>";
@@ -66,16 +72,22 @@ const startGame = (clickedValue) => {
   } else {
     switch (enemysMove) {
       case 0: // ----- rock
+        enemyScore++;
+        outputScore.innerHTML = youScore + " X " + enemyScore;
         outputResult.innerHTML = "You Lose!";
         outputYou.innerHTML = "You Choose: <span>Scissors</span>";
         outputEnemy.innerHTML = "Enemy Choose: <span>Rock</span>";
         break;
       case 1: // ----- paper
+        youScore++;
+        outputScore.innerHTML = youScore + " X " + enemyScore;
         outputResult.innerHTML = "You Win!";
         outputYou.innerHTML = "You Choose: <span>Scissors</span>";
         outputEnemy.innerHTML = "Enemy Choose:  <span>Paper</span>";
         break;
       default: // ---- scissors
+        maxRound++;
+        outputScore.innerHTML = youScore + " X " + enemyScore;
         outputResult.innerHTML = "Draw!";
         outputYou.innerHTML = "You Choose: <span>Scissors</span>";
         outputEnemy.innerHTML = "Enemy Choose: <span>Scissors</span>";
